@@ -2,9 +2,6 @@
 
 A comprehensive web-based management system designed for residential complexes and gated communities to efficiently manage visitor entries, parcel deliveries, and resident approvals.
 
-
-
-
 ## 🌟 Features
 
 ### Visitor Management
@@ -223,6 +220,14 @@ cd "project managment system"
    ```
 
    The application will open at `http://localhost:4200`
+
+## 🚢 Deploying to Vercel (serverless)
+
+1. **Project linking**: From the repo root run `vercel` and select the project; Vercel reads `vercel.json` for build and routing.
+2. **Environment variables**: In Vercel Project Settings → Environment Variables, add the values shown in [backend/.env.example](backend/.env.example): `PORT`, `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, `JWT_SECRET`.
+3. **Database**: Point the DB variables to a hosted MySQL instance that allows external connections (e.g., PlanetScale, RDS). Ensure the user has privileges and SSL if required.
+4. **Deploy**: Push to the connected branch or run `vercel --prod`; Vercel will install and build both workspaces and expose the API at `/api` with the Angular app served statically.
+5. **Health check**: After deploy, hit `/health` to confirm DB connectivity.
 
 ## 🎯 Usage
 
