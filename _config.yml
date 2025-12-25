@@ -1,0 +1,28 @@
+# Jekyll Configuration for GitHub Pages
+
+# Exclude directories that should not be processed by Jekyll
+exclude:
+  - node_modules/
+  - backend/node_modules/
+  - frontend/node_modules/
+  - frontend/%AppData%/
+  - backend/
+  - frontend/
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - angular.json
+  - "*.log"
+  - vendor/
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+
+# Theme
+theme: jekyll-theme-primer
+
+# Site settings
+title: Visitor and Parcel Management for Gated Communities
+description: A comprehensive system for managing visitors and parcels in gated communities
