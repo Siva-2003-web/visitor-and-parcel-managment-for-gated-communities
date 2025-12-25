@@ -42,6 +42,12 @@ app.use((req: Request, res: Response) => {
 // Centralized error handler (must be last)
 app.use(errorHandler);
 
-app.listen(env.port, () => {
-  console.log(`Server listening on port ${env.port}`);
-});
+// Export the app for serverless (Vercel) while still supporting local dev
+export default app;
+
+if (!process.env.VERCEL) {
+  const port = env.port || 3000;
+  app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+  });
+}
