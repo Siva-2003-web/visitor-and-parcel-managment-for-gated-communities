@@ -3,7 +3,7 @@
 A comprehensive web-based management system designed for residential complexes and gated communities to efficiently manage visitor entries, parcel deliveries, and resident approvals.
 
 
-Demo Link of Project: https://siva-2003-web.github.io/visitor-and-parcel-managment-for-gated-communities/
+
 
 ## 🌟 Features
 
